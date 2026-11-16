@@ -1,0 +1,10 @@
+int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
+    int i=arrivalTime,j=delayedTime,sum;
+    sum=i+j;
+    if(sum>=24)
+    {
+        return (sum-24);
+    }
+    else
+    return sum;
+}
