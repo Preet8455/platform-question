@@ -1,1 +1,26 @@
+#include <stdio.h>
 
+int main() {
+    int T;
+    // Read the number of test cases
+    if (scanf("%d", &T) != 1) return 0;
+
+    while (T--) {
+        int N;
+        scanf("%d", &N);
+
+        // Extract the last digit using the modulo operator
+        int last_digit = N % 10;
+
+        // Extract the first digit by repeatedly dividing by 10
+        int first_digit = N;
+        while (first_digit >= 10) {
+            first_digit /= 10;
+        }
+
+        // Print the sum of the first and last digits
+        printf("%d\n", first_digit + last_digit);
+    }
+
+    return 0;
+}
